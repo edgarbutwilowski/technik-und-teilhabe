@@ -7,7 +7,8 @@ _Bildquelle: radoma/stock.adobe.com_
 
 Dass IoT tatsächlich das Leben von Menschen verbessern kann, zeigt der bekannte Programmierer und Blogger _Scott Hanselman_ eindrucksvoll in diesem Videomitschnitt der _Microsoft Connect() Conference_ von 2015 (Englisch):
 
-> ### 📺 Video-Beitrag
+> **📺 Video-Beitrag**
+>
 > **Thema:** Scott Hanselman's best demo! IoT, Azure, Machine Learning  
 > **Link:** [▶ Video auf YouTube öffnen](https://www.youtube.com/watch?v=u5oTz1e5qqE)
 >
@@ -27,7 +28,7 @@ Das Sensorsystem liefert das Messresultat in der Einheit vom zehnfachen Mikrogra
 
 Zusätzlich zum Raspberry und zum Sensor empfiehlt es sich, noch eine Powerbank zu verwenden, um die Messungen auch mobil und in entlegenen Gebieten durchführen zu können. Ich habe die folgende Powerbank verwendet und kann diese nur empfehlen:
 
-Optional: Powerbank "Innoo Tech Portable Solar Charger" mit 10000 mAh, 50 CHF
+* Optional: Powerbank "Innoo Tech Portable Solar Charger" mit 10000 mAh, 50 CHF
 
 Die Verkabelung ist schnell und einfach gemacht. Der nova-Sensor kommt mit einem USB-Stecker, den Sie einfach an einem der USB-Ports des Raspberry anschliessen können, und das wäre es:
 
@@ -167,8 +168,27 @@ kann dieses System über einen Zeitraum von ca. _12 Stunden_ Messdaten liefern.
 
 Solch ein Projekt ist immer eine gute Gelegenheit um auf untragbare gesundheitliche Zustände im Zusammenhang mit Feinstaub-Belastungen hinzuweisen. So gibt es Städte, die in Arealen, in denen Menschen leben müssen, Feinstaub-Werte von bis zu _417 μg/m^3_ bei _PM 2.5_ erreichen. Dies wird im folgenden Video besonders eindrücklich thematisiert:
 
-> ### 📺 Video-Beitrag
+> **📺 Video-Beitrag**
+>
 > **Thema:** Most Polluted Major City On Earth  
-> **Link:** [▶ Video auf YouTube öffnen](https://www.youtube.com/watch?v=mNZIdHhdQs8)
+> **[▶ Video auf YouTube öffnen](https://www.youtube.com/watch?v=mNZIdHhdQs8)**
 >
 > _Hinweis: Durch Klicken auf den Link verlassen Sie diesen Artikel und werden zu YouTube weitergeleitet. Dort gelten die Datenschutzbestimmungen von Google._
+
+---
+
+> **💾 Artikel als PDF**
+>
+> [▶ Artikel als PDF herunterladen](https://github.com/edgarbutwilowski/technik-und-teilhabe/blob/main/beitr%C3%A4ge/2020-12-feinstaub-iot/2020-12-feinstaub-iot.pdf)
+> -
+
+---
+
+> **💬 Gemeinsam weiterdenken**
+>
+> Technik und Wissenschaft leben vom Austausch. Haben Sie Fragen zum Aufbau, eigene Erfahrungen mit Feinstaub-Messungen oder Anregungen zu den Daten? 
+>
+> Ich freue mich über eine sachliche und offene Diskussion zu diesem Beitrag auf Mastodon. Lassen Sie uns dort ins Gespräch kommen:
+>
+> [▶ Zum Diskussionsfaden auf swiss.social](https://swiss.social/@edgar_butwilowski/116167025003927679)
+> -
