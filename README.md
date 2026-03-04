@@ -19,6 +19,6 @@ Fragen, Anregungen und fachliche Diskussionen finden auf Mastodon statt:
 
 Hier finden Sie eine chronologische Übersicht der technischen Notizen und Projekte. Jedes Thema wird so aufbereitet, dass der Prozess des Verstehens und Nachbauens im Vordergrund steht.
 
-* **[Bauen Sie Ihr eigenes Internet-of-Things-Endgerät zur Messung der Feinstaub-Belastung](https://github.com/edgarbutwilowski/technik-und-teilhabe/blob/main/beitr%C3%A4ge/2020-12-feinstaub-iot/index.md)** (Dezember 2020)
-    * *Thema:* Aufbau eines preiswerten Sensors zur Erfassung der Luftqualität und die anschließende Datenübermittlung.
+* **[Bauen Sie Ihr eigenes Internet-of-Things-Endgerät zur Messung der Feinstaub-Belastung](https://github.com/edgarbutwilowski/technik-und-teilhabe/blob/main/beitr%C3%A4ge/2020-12-feinstaub-iot/index.md)** (ursprüngliche Fassung am 5. Dezember 2020 auf LinkedIn publiziert)
+    * *Thema:* Aufbau eines preiswerten Sensors zur Erfassung der Luftqualität und die anschliessende Datenübermittlung.
     * *Schwerpunkt:* Sensorik, Datenhoheit und praktische Anwendung im Alltag.
