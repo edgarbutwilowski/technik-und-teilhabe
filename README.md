@@ -13,7 +13,7 @@ Es geht hier weniger um fertige Antworten als um den Prozess des Verstehens – 
 ### Austausch
 
 Fragen, Anregungen und fachliche Diskussionen finden auf Mastodon statt:
-👉 [@edgar_butwilowski@swiss.social](https://swiss.social/@edgar_butwilowski)
+👉 <a rel="me" href="https://swiss.social/@edgar_butwilowski">@edgar_butwilowski@swiss.social</a>
 
 ### Aktuelle Beiträge und Dokumentationen
 
