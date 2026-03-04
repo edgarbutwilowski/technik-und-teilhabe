@@ -3,9 +3,9 @@ _Bildquelle: radoma/stock.adobe.com_
 
 # Bauen Sie Ihr eigenes Internet-of-Things-Endgerät zur Messung der Feinstaub-Belastung
 
-**Das "Internet of Things" (IoT) ist ein Netzwerk von smarten Geräten, die durch Sensoren und durch ihre Vernetzung den Alltag und das Leben der Menschen verbessern können. Insbesondere beim zukünftigen Ausbau von Städten zu Smarter Cities wird IoT eine besondere Rolle zugesprochen. In diesem Workshop bauen wir ein Werkzeug für die Smart-City-Umgebung: ein IoT-Gerät für die Messung der Feinstaub-Belastung der Luft auf Basis eines Raspberry Pi!**
+**Unsere Luft ist unsichtbar. Wir atmen sie tief in unsere Lungen, Tag für Tag. Doch was genau befindet sich eigentlich darin? Oft sind es Dinge, die unsere Sinne nicht erfassen können. Feinstaub zum Beispiel. Das "Internet of Things" (IoT) – also die Vernetzung von kleinen, intelligenten Geräten – gibt uns eine Art neuen Sinn. Es erlaubt uns, das Unsichtbare sichtbar zu machen. In diesem Workshop bauen wir gemeinsam ein solches "Sinnesorgan": Ein eigenes Messgerät auf Basis eines Raspberry Pi, mit dem wir die Feinstaub-Belastung direkt vor unserer eigenen Haustür messen können.**
 
-Dass IoT tatsächlich das Leben von Menschen verbessern kann, zeigt der bekannte Programmierer und Blogger _Scott Hanselman_ eindrucksvoll in diesem Videomitschnitt der _Microsoft Connect() Conference_ von 2015 (Englisch):
+Dass solche kleinen, vernetzten Geräte nicht nur eine technische Spielerei sind, sondern unser Leben tatsächlich verbessern können, beschreibt der Entwickler _Scott Hanselman_ sehr eindrücklich in einem Vortrag aus dem Jahr 2015 (Englisch):
 
 > **📺 Video-Beitrag**
 >
@@ -14,49 +14,49 @@ Dass IoT tatsächlich das Leben von Menschen verbessern kann, zeigt der bekannte
 >
 > _Hinweis: Durch Klicken auf den Link verlassen Sie diesen Artikel und werden zu YouTube weitergeleitet. Dort gelten die Datenschutzbestimmungen von Google._
 
-IoT kann also auch die Gesundheit und damit das Leben und den Alltag unmittelbar verbessern. Auch das IoT-System, das wir in diesem Workshop bauen, kann einen positiven Effekt auf die Lebensqualität in Städten bewirken, denn Feinstaub-Messgeräte haben einen Aufklärungs-Effekt, der zu mehr Partizipation und letztendlich Optimierung durch die Bürger führen kann. Bürger-Projekte zur Überwachung der Luftqualität sind daher wichtig und verzeichnen auch tatsächlich einen immer grösseren Zulauf. Lassen Sie uns also starten!
+Das Messen von Feinstaub ist ein wunderbares Beispiel dafür, wie Technologie uns allen dienen kann. Wenn wir Bürgerinnen und Bürger anfangen, unsere Umwelt selbst zu vermessen, schaffen wir eine gemeinsame, sachliche Grundlage. Das nennt man *Citizen Science* – Bürgerwissenschaft. Solche Projekte erfreuen sich völlig zu Recht immer grösserer Beliebtheit, denn sie stärken die Teilhabe und helfen uns, unsere Städte lebenswerter zu machen. Lassen Sie uns also gemeinsam loslegen!
 
-Per Definition wird für ein IoT-Gerät ein Computer benötigt. Dies kann einfach nur ein Mikrocontroller sein, oder aber auch ein ganzer Ein-Platinen-PC im Kleinstformat, wie es der Raspberry Pi ist. Der Raspberry Pi wird aufgrund seiner kompakten Form, seines sparsamen Stromverbrauchs und seiner offenen Architektur häufig in IoT-Umgebungen verwendet. Er erweist sich immer mehr als dezentrales Universal-Werkzeug für Smart-City-Anwendungen.
+Für ein solches Unterfangen brauchen wir im Grunde nur einen kleinen, genügsamen Computer. Der Raspberry Pi ist dafür geradezu prädestiniert. Er ist klein, sparsam und offen für alle möglichen Erweiterungen. Ein echtes Werkzeug für die Praxis.
 
-Für diesen Workshop wird vorausgesetzt, dass Sie bereits über einen lauffähigen Raspberry Pi verfügen und Grundkenntnisse im Umgang damit haben. Ich habe für dieses Experiment einen Raspberry Pi 2 Model B verwendet, aber ein Raspberry Pi 3 oder 4 tut es sicherlich auch. Zum Messen von Feinstaub benötigen wir zusätzlich zum Raspberry Pi noch das folgende Sensorsystem:
+Ich setze für diesen Workshop voraus, dass Sie bereits einen lauffähigen Raspberry Pi vor sich liegen haben und die grundlegenden Schritte kennen. Ich habe für meinen Versuch einen älteren Raspberry Pi 2 Model B verwendet – ein aktuellerer Pi 3 oder 4 funktioniert natürlich genauso gut. Das eigentliche Herzstück, sozusagen unsere Nase in den Wind, ist dieser Sensor:
 
-* Feinstaubsensor "nova PM sensor" Typ SDS011, 17 CHF
+* Feinstaubsensor "nova PM sensor" Typ SDS011, ca. 17 CHF
 
-Der Sensor dieses Systems misst Feinstaub in den Korngrössen 2.5 μm (auch "PM2.5", wobei PM für "Particulate Matter" steht) und 10 μm (auch "PM10"). Dies sind die typischen Korngrössen, die bei Feinstaub gemessen werden. Ausserdem wurde die Messqualität des Sensors durch [influenceair](https://influencair.be/accuracy-of-the-sds011/) und durch [hackAir](https://www.hackair.eu/how-accurate-are-the-hackair-sensors/) in einem Vergleich mit höherwertigen Sensoren untersucht. Die Ergebnisse sind durchaus positiv zu bewerten.
+Der Sensor misst Feinstaub in zwei wichtigen Grössenordnungen: 2.5 Mikrometer (μm oder "PM2.5") und 10 Mikrometer ("PM10"). Das sind winzige Partikel, viel dünner als ein menschliches Haar. Die Messqualität dieses Sensors ist für unsere Zwecke absolut beachtlich. Vergleiche durch Initiativen wie [influenceair](https://influencair.be/accuracy-of-the-sds011/) und [hackAir](https://www.hackair.eu/how-accurate-are-the-hackair-sensors/) haben gezeigt, dass er sich vor teureren Profigeräten nicht verstecken muss.
 
-Das Sensorsystem liefert das Messresultat in der Einheit vom zehnfachen Mikrogramm pro Kubikmeter (μg/m^3). Wenn also der Sensor zum Korndurchmesser 2.5 μm (oder "2.5mym" geschrieben) einen Wert von 32 misst, dann bedeutet das, dass sich in einem Kubikmeter Raum insgesamt 3.2 Mikrogramm Feinstaub der Korngrösse 2.5 Mikrometer befinden.
+Das Gerät liefert uns die Messwerte in einer etwas sperrigen Einheit: dem zehnfachen Mikrogramm pro Kubikmeter ($10 \cdot \mu g/m^3$). Misst der Sensor bei der Korngrösse 2.5 μm also einen Wert von 32, bedeutet das übersetzt: In einem Kubikmeter Luft schweben 3.2 Mikrogramm Feinstaub dieser feinen Partikel.
 
-Zusätzlich zum Raspberry und zum Sensor empfiehlt es sich, noch eine Powerbank zu verwenden, um die Messungen auch mobil und in entlegenen Gebieten durchführen zu können. Ich habe die folgende Powerbank verwendet und kann diese nur empfehlen:
+Um unsere Messstation wirklich unabhängig und mobil zu machen, empfehle ich noch eine Powerbank. So können Sie Ihre Messungen auch draussen im Grünen oder an einer befahrenen Strasse durchführen:
 
-* Optional: Powerbank "Innoo Tech Portable Solar Charger" mit 10000 mAh, 50 CHF
+* Optional: Powerbank "Innoo Tech Portable Solar Charger" mit 10000 mAh, ca. 50 CHF
 
-Die Verkabelung ist schnell und einfach gemacht. Der nova-Sensor kommt mit einem USB-Stecker, den Sie einfach an einem der USB-Ports des Raspberry anschliessen können, und das wäre es:
+Die Elektronik aufzubauen, ist denkbar einfach. Wir müssen hier nicht löten. Der nova-Sensor bringt ein USB-Kabel mit, das wir schlicht in einen der USB-Ports unseres Raspberrys stecken. Das war es auch schon mit der Hardware:
 
 ![Verkabelung des Raspberry Pi mit dem Feinstaub-Sensor](raspi_nova_cable.jpg)
 
-In dem obigen Bild hat der Raspberry noch zusätzlich einen WiFi-Dongle und ein USB-Kabel zur Stromversorgung (z.B. per Powerbank) eingesteckt. Der WiFi-Dongle ist praktisch, um den Raspberry auch mal per Remote-Zugriff bedienen zu können, für unseren Test-Aufbau spielt dieses "Gadget" jedoch gar keine Rolle.
+*(Auf meinem Foto hat der Raspberry noch einen WiFi-Dongle und das Stromkabel zur Powerbank eingesteckt. Das WLAN-Modul ist praktisch für den kabellosen Zugriff, für die eigentliche Messung aber nicht zwingend erforderlich.)*
 
-Der nova-Sensor benötigt keinen separaten Stromanschluss, sondern bezieht seinen Strom vollständig über das USB-Kabel vom Raspberry. Sobald der Raspberry also an den Strom angeschlossen wird, wird auch der Feinstaub-Sensor aktiviert und beginnt mit den Messungen. Allerdings müssen wir irgendwie an die Messwerte heran kommen. Und auch hier hilft uns der Raspberry weiter. Allerdings kommen wir nicht drum rum, zu programmieren, um an diese Daten heran zu kommen.
+Der Sensor zieht seinen Strom direkt über das USB-Kabel. Sobald der Pi läuft, erwacht auch der Sensor zum Leben und misst. Aber wie kommen wir nun an diese Daten heran? Hier müssen wir dem Computer, unserem Raspberry Pi, mitteilen, was er tun soll. Wir programmieren ihn.
 
-Zur Programmierung verwenden wir die "Standard-Programmiersprache" des Raspberry Pi, die ihm auch seine Namensendung verleiht, es ist _Python_. Die Programmierung in Python ist auf dem Raspberry besonders praktisch, da sowohl ein Python-Interpreter als auch die Python-Entwicklungsumgebung _Thonny Python IDE_ standardmässig vorinstalliert sind.
+Die Sprache, die wir dafür verwenden, ist _Python_ – eine wunderbar lesbare und klare Programmiersprache. Der Raspberry Pi bringt dafür schon alles Nötige mit: Den Python-Interpreter und eine handliche Entwicklungsumgebung namens _Thonny Python IDE_. 
 
-Bevor wir jedoch mit der Programmierung beginnen können, sollten wir noch eine Bibliothek installieren, die uns den Lese-Zugriff auf die USB-Schnittstelle aus Python heraus ermöglicht. Diese Bibliothek heisst _pyserial_. Dazu öffnen wir die Befehlszeile (_Terminal_) im Raspberry Pi und setzen folgenden Befehl ab:
+Bevor wir den Code schreiben, müssen wir Python noch eine Erweiterung spendieren, damit es mit der USB-Schnittstelle "sprechen" kann. Diese Bibliothek heisst _pyserial_. Öffnen Sie dazu bitte die Befehlszeile (_Terminal_) auf Ihrem Raspberry und geben Sie diesen Befehl ein:
 
 ```bash
 pip3 install pyserial
 ```
 
-Danach öffnen wir auf dem Raspberry das Programm Thonny Python IDE. Dieses sollte vorinstalliert sein. Sie finden es im Hauptmenü (das Himbeer-Symbol oben links) im folgenden Menüast:
+Öffnen Sie danach die Thonny Python IDE. Sie finden sie im Hauptmenü unter dem Himbeer-Symbol in der oberen linken Ecke:
 
 _Himbeer-Symbol => Entwicklung => Thonny Python IDE_
 
-Es sollte sich sodann die folgende Entwicklungsumgebung (IDE) öffnen:
+Vor uns liegt nun unser Arbeitsplatz:
 
 ![Thonny Python IDE](raspi_thonny_start.png)
 
-Die IDE ist dreigeteilt: ein Fenster für den Quelltext (links oben), ein Fenster für die _Variablen-Übersicht_ (rechts) und ein Fenster für die _Konsolen-Ausgaben_ (_Shell_ links unten). Unten links in der Shell sollte mindestens "Python 3..." aufgeführt sein, denn diese Version benötigen wir für einige der folgenden Funktionsaufrufe.
+Die Oberfläche ist aufgeräumt: Oben links schreiben wir unseren Code, rechts sehen wir unsere Variablen, und unten links befindet sich die _Shell_, die Konsole. Stellen Sie sicher, dass unten in der Shell "Python 3..." steht.
 
-Kommen wir nun zum Kernstück unseres Aufbaus, dem Python-Skript. Dies ist das gesamte Python-Skript, das wir für die Messungen benötigen:
+Hier ist das Skript, das für uns die Arbeit übernimmt. Es ist kurz und bündig:
 
 ```python
 import serial, time
@@ -81,92 +81,91 @@ while True:
     time.sleep(10)
 ```
 
-Tippen Sie das einfach in den Quelltext-Bereich oben links in der Thonny Python IDE ein. Speichern Sie anschliessend das Skript an einem beliebigen Ort auf den Raspberry z.B. unter dem Dateinamen _feinstaub.py_. Achten Sie darauf, die Dateiendung "py" zu verwenden. Ich habe das Skript z.B. in diesem Ordner gespeichert:
+Tippen Sie den Text in das linke obere Fenster ein und speichern Sie ihn. Suchen Sie sich einen passenden Ordner, zum Beispiel unter dem Namen _feinstaub.py_. Vergessen Sie nicht die Endung `.py`. Bei mir liegt die Datei hier:
 
 ```bash
 /home/pi/Dokumente/develop/python/feinstaub.py
 ```
 
-Was passiert genau in dem Skript? Zunächst besorgen wir uns den Zugriff auf die USB-Schnittstelle und damit auf die Daten des Feinstaub-Sensors ("`ser = serial.Serial('/dev/ttyUSB0')`"). Anschliessend führen wir die Messungen in einer Endlos-Schleife durch ("`while True:`"). Innerhalb der Endlos-Schleife werden zunächst die Bytes von der USB-Schnittstelle ausgelesen, immer zehn Bytes pro Schleifendurchgang. Die Messwerte selbst stehen in dem Byte-Array an 3. und 4. Stelle (`[2:4]`) für den Messwert der Korngrösse _2.5 μm_ und an der 5. und 6. Stelle (`[4:6]`) für den Messwert der Korngrösse _10 μm_. Jeweils zwei Bytes werden zusammengefasst zu einem Wert vom Datentyp Integer (Ganzzahl) der Länge _16 bit_.
+Lassen Sie uns kurz schauen, was dieser Code eigentlich bewirkt. Zunächst (`serial.Serial`) öffnen wir den Datenkanal zum USB-Anschluss. Dann betritt das Skript eine Endlosschleife (`while True:`): Es lauscht beständig auf die Schnittstelle und liest Stück für Stück zehn Daten-Bytes pro Durchgang. 
+Die für uns spannenden Werte verbergen sich im Datenstrom: An der dritten und vierten Stelle (`[2:4]`) liegt der Messwert für die *2.5 μm*-Partikel, an der fünften und sechsten Stelle (`[4:6]`) der Wert für die *10 μm*-Partikel. Der Computer fügt diese winzigen Datenhäppchen zu einer ordentlichen Zahl zusammen.
 
-Der vom Sensor zurückgelieferte Messwert ist in der "unschönen" Einheit vom Zehnfachen eines Mikrogramms. Um also auf die Einheit Mikrogramm zu kommen, dividieren wir den gelieferten Wert durch zehn.
+Damit wir die etwas umständliche Einheit des Sensors in unser vertrautes Mikrogramm übersetzen, teilen wir den Wert durch 10. Anschliessend protokolliert das Programm das aktuelle Datum, die Uhrzeit und die beiden Messwerte ordentlich getrennt durch ein Semikolon in einer eigenen Datei namens `messwerte.csv`. Nach jedem Eintrag legt das Skript für zehn Sekunden eine kleine Pause ein (`time.sleep(10)`), bevor es von neuem misst.
 
-Anschliessend schreibt das Skript die gelesenen Werte in eine neue Zeile einer CSV-Datei. Im Beispiel hat die Datei den Namen messwerte.csv. Achten Sie bitte hier darauf, einen Pfad zu einem Ordner zu verwenden, der bereits existiert oder legen Sie den Ordner entsprechend an. Nach dem Schreiben einer Messung in eine Zeile macht das Programm eine Pause von 10 Sekunden bis zur nächsten Messung (`time.sleep(10)`).
-
-Sie können nun mit der Messung beginnen, indem Sie in der Thonny Python IDE den Play-Button oben in der Werkzeug-Leiste klicken. Die Messwerte werden in die Datei messwerte.csv auf dem Raspberry Pi zusammen mit Datum und Uhrzeit gespeichert. Alle Werte werden durch Semikola getrennt. Das Ergebnis einer Messung kann dann beispielsweise so aussehen:
+Wenn Sie nun in Thonny oben auf den "Play"-Button drücken, beginnt die Aufzeichnung. Nach einiger Zeit sieht unsere `messwerte.csv`-Datei dann in etwa so aus:
 
 ```csv
 2020-11-08 22:50:38.196183;3.2;4.8
 ```
-Ganz links sind Datum und Uhrzeit der Messung, mittig (nach dem Semikolon) die _PM2.5_-Menge, rechts die _PM10_-Menge.
+Links die genaue Zeit, in der Mitte der *PM2.5*-Wert, ganz rechts der *PM10*-Wert.
 
-Dies sind typische Messwerte für den Schweizer Ort Steckborn. Dieser hat also relativ niedrige Feinstaub-Werte. Zum Vergleich: In der nahegelegenen Stadt Singen habe ich bei _PM10_ an einem typischen Samstag einen Wert von _10 μg/m^3_ gemessen. In stark Feinstaub-verschmutzten Gebieten werden auch mal über _400 μg/m^3_ erreicht (mehr dazu ganz unten in diesem Artikel).
+Ein Wert von *4.8* – das ist typisch für einen Ort mit relativ guter Luftqualität, wie etwa auf dem Land oder im kleinen Schweizer Örtchen Steckborn. Um das greifbarer zu machen: Im städtischen Singen habe ich an einem normalen Samstag Werte von *10 μg/m^3* (PM10) gemessen. Es gibt aber auch Regionen auf der Welt, da atmen Menschen tagtäglich Luft ein, die Werte von über *400 μg/m^3* erreicht. Darauf kommen wir gleich noch zurück.
 
-Das Python-Skript kann nicht nur aus der IDE, sondern auch von der Konsole aus mit folgendem Befehl gestartet werden:
+Sie können unser kleines Skript übrigens auch ganz ohne grafische Oberfläche aus einem Terminalfenster starten:
 
 ```bash
 python3 /home/pi/Dokumente/develop/python/feinstaub.py
 ```
 
-Um das Sensor-System spontan einsetzen zu können, ohne den Raspberry an einen Bildschirm anschliessen zu müssen, empfiehlt es sich, die Messung automatisch beim Start des Betriebssystems mit starten zu lassen. Hierzu wird ein Startup-Skript benötigt, das wiederum das Python-Skript aufruft. Um ein Startup-Skript zu erzeugen, geben wir folgendes in der Konsole ein:
+Ein Messgerät ist natürlich dann am besten, wenn es einfach so funktioniert, ohne dass wir jedes Mal einen Monitor anschliessen müssen. Wir bringen dem Raspberry Pi also bei, unser Skript bei jedem Hochfahren von selbst zu starten. Wir öffnen das Terminal und tippen:
 
 ```bash
 crontab -e
 ```
 
-Wählen Sie aus der nun folgenden Liste Ihren bevorzugten Text-Editor aus. Für Einsteiger am einfachsten zu bedienen ist der Nano-Editor. In der Liste im folgenden Screenshot ist es die zweite Option, weshalb wir hier "2" eintippen und mit _[ENTER]_ bestätigen:
+Das System fragt uns nun (meist beim ersten Mal), welchen Texteditor wir verwenden möchten. Am einfachsten ist "Nano". Im Bild unten wäre das die Option "2", die wir mit _[ENTER]_ bestätigen:
 
 ![Aufruf crontab auf der Konsole](aufruf_crontab_konsole.png)
 
-Daraufhin öffnet sich der Text-Editor Nano mit der Konfigurationsdatei von _crontab_. crontab ist Task-Scheduler, mit dem wir automatisiert Prozesse starten lassen können. Fügen Sie in der erste Zeile den bereits oben erwähnten Befehl zum Starten der Messung hinzu, mit dem Hinweis, dass das Skript bei einem Reboot ("`@reboot`") starten soll:
+Im Editor fügen wir ganz unten die Anweisung ein, die unserem Raspberry Pi sagt: "Beim Start (`@reboot`) führst du bitte im Hintergrund (`&`) das Feinstaub-Skript aus":
 
 ```bash
 @reboot python3 /home/pi/Dokumente/develop/python/feinstaub.py &
 ```
 
-Das "`&`" am Ende stellt sicher, dass nach dem Absetzen des Befehls die aktuelle Zeile verlassen wird. Sichern Sie die Änderung mit _Ctrl+X_, "j", _[ENTER]_. Nach einem Neustart des Systems startet die Messung nun automatisch. Ab jetzt startet die Messung immer automatisch, sobald der Raspberry Pi gestartet wird.
+Mit _Ctrl+X_, der Taste "j" und _[ENTER]_ speichern und schliessen wir die Datei. Wenn Sie den Pi nun neu starten, beginnt er sofort, still und leise Daten für uns zu sammeln.
 
-Und das wäre es im Grunde, ihr IoT-Messsystem ist nun abgeschlossen. Um das System praktischer transportieren zu können, bietet es sich noch an, eine Frischhaltedose einzusetzen und mit schönen Stickern zu bekleben, wie in der folgenden Abbildung. :)
+Damit ist unser Messgerät fertig. Wenn man es ein wenig vor Wind und Wetter schützen möchte, reicht oft schon eine einfache Frischhaltedose für den Anfang – vielleicht noch versehen mit ein paar Aufklebern:
 
 ![Raspberry Pi mit Feinstaub-Sensor im offenen Behälter](raspi_feinstaub_offener_behaelter.jpg)
 
-Als kleines Goodie zum Finale, können wir unsere Messdaten noch hübsch in einem Diagramm visualisieren. Dank des CSV-Formats ist das mit wenigen Schritten möglich z.B. mit Microsoft Excel oder mit LibreOffice Calc. Da wir uns mit dem Raspi bereits in der Open-Source-Welt bewegen, bleibe ich im folgenden Beispiel dabei und verwende LibreOffice Calc (mit der Benutzeroberfläche "In Registern"). Hier finden Sie unter
+Zahlenkolonnen in einer Datei sind zwar aufschlussreich, aber wir Menschen erfassen Dinge am besten visuell. Da wir die Daten im CSV-Format gespeichert haben, können wir sie wunderbar einfach grafisch darstellen. Ob Sie Excel oder das freie LibreOffice Calc verwenden, spielt keine Rolle. Ich zeige es hier am Beispiel vom quelloffenen LibreOffice Calc. Gehen Sie auf den Reiter "Daten" und wählen Sie:
 
 _=> Daten => Verknüpfung zu externen Daten..._
 
 ![Datenverknüpfung im LibreOffice Calc](calc_datenverknuepfung.png)
 
-die Möglichkeit, die CSV-Datei einzulesen. Wählen Sie darauf folgenden Dialog-Fenster als "Trennoption" die Option "Getrennt" und dann das "Semikolon":
+Wählen Sie die Datei und stellen Sie im Dialog als "Trennoption" das "Semikolon" ein:
 
 ![LibreOffice Calc Textimport](calc_textimport.png)
 
-Als Ergebnis sollten die Messungen in Calc öffnen. Fügen Sie noch eine leere oberste Zeile ein und benennen Sie die Spalten z.B. "timestamp", "2.5mym" und "10mym" (in dieser Reihenfolge). Wählen Sie anschliessend nur die Inhalte der Spalten "timestamp" und "10mym":
+Nun sehen Sie die Spalten vor sich. Wir fügen noch schnell eine Titelzeile ein ("timestamp", "2.5mym", "10mym") und markieren die Spalten "timestamp" sowie "10mym":
 
 ![LibreOffice Calc Spaltenauswahl](calc_auswahl_spalten.png)
 
-Nun ist es soweit, wir können ein Diagramm erstellen. Wählen Sie hierzu in Calc den Menüpunkt:
+Jetzt geht es ans Zeichnen:
 
 _=> Einfügen => Diagramm..._
 
-Im Anschliessenden Dialogfenster wählen Sie:
+Wir wählen:
 
 _=> Liniendiagramm => Nur Linien => Fertigstellen_
 
-Und damit ist auch das erledigt. In der Calc-Tabelle sollte nun ein Messwerte-Diagramm ähnlich diesem hier eingeblendet sein:
+Und schon entfaltet sich vor unseren Augen das Unsichtbare als sichtbare Kurve:
 
 ![Messwerte-Diagramm in LibreOffice Calc](messwerte_diagramm.png)
 
-Das Diagramm zeigt die Entwicklung der gemessenen Feinstaub-Werte der Grösse 10 μm über einen Zeitraum von 6 min. Diese schwanken im abgebildeten Beispiel in einem Bereich zwischen _2.5_ und _2.9 μg/m^3_. Alle _10 Sekunden_ liegt ein Datenpunkt vor.
+In diesem Testlauf schwanken die PM10-Werte über sechs Minuten hinweg gemütlich zwischen _2.5_ und _2.9 μg/m^3_. Das ist saubere Luft.
 
-Jetzt stellt sich noch die Frage, wie lange die Stromversorgung dieses Messaufbaus mit der oben angegebenen _10000-mAh_-Powerbank hält. Ich habe das in einem Test-Aufbau geprüft und das System einfach mal im Zimmer bis zum bitteren Ende laufen gelassen. Das Ergebnis: Bei Zimmertemperatur und einem Messintervall von _10 Minuten_ (=_600 Sekunden_):
+Aber wie alltagstauglich ist unser Aufbau? Ich habe die vorgeschlagene _10000-mAh_-Powerbank getestet und das Gerät bis zum Ende laufen lassen. Um den Akku zu schonen, habe ich dem Programm aber eine Pause von _10 Minuten_ (_600 Sekunden_) zwischen den Messungen verordnet:
 
 ```python
 time.sleep(600)
 ```
 
-kann dieses System über einen Zeitraum von ca. _12 Stunden_ Messdaten liefern.
+Mit dieser Einstellung hielt unser Bürger-Messgerät starke _12 Stunden_ am Stück durch.
 
-Solch ein Projekt ist immer eine gute Gelegenheit um auf untragbare gesundheitliche Zustände im Zusammenhang mit Feinstaub-Belastungen hinzuweisen. So gibt es Städte, die in Arealen, in denen Menschen leben müssen, Feinstaub-Werte von bis zu _417 μg/m^3_ bei _PM 2.5_ erreichen. Dies wird im folgenden Video besonders eindrücklich thematisiert:
+Solche Projekte sind wichtig. Sie geben uns Fakten an die Hand, um über Luftqualität zu sprechen. Denn saubere Luft ist leider nicht für alle Menschen selbstverständlich. In einigen Ballungsräumen der Welt müssen die Menschen mit Belastungen von bis zu _417 μg/m^3_ (PM 2.5) leben. Was das bedeutet, zeigt der folgende kurze Beitrag:
 
 > **📺 Video-Beitrag**
 >
@@ -186,9 +185,9 @@ Solch ein Projekt ist immer eine gute Gelegenheit um auf untragbare gesundheitli
 
 > **💬 Gemeinsam weiterdenken**
 >
-> Technik und Wissenschaft leben vom Austausch. Haben Sie Fragen zum Aufbau, eigene Erfahrungen mit Feinstaub-Messungen oder Anregungen zu den Daten? 
+> Technik und Wissenschaft leben vom Austausch. Haben Sie Fragen zum Aufbau, eigene Erfahrungen mit solchen Messungen gemacht oder Anregungen zu unserer Datenaufzeichnung? 
 >
-> Ich freue mich über eine sachliche und offene Diskussion zu diesem Beitrag auf Mastodon. Lassen Sie uns dort ins Gespräch kommen:
+> Ich freue mich immer über eine sachliche, offene Diskussion, denn nur gemeinsam kommen wir weiter. Lassen Sie uns auf Mastodon ins Gespräch kommen:
 >
 > [▶ Zum Diskussionsfaden auf swiss.social](https://swiss.social/@edgar_butwilowski/116167025003927679)
 > -
