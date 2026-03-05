@@ -1,4 +1,5 @@
 ![Artikel-Leitbild zeigt ein Smartphone, das mit vielen Dingen kommuniziert](feinstaub-iot-heropic.jpg)
+
 _Bildquelle: radoma/stock.adobe.com_
 
 # Bauen Sie Ihr eigenes Internet-of-Things-Endgerät zur Messung der Feinstaub-Belastung
