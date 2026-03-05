@@ -26,3 +26,7 @@ Hier finden Sie eine chronologische Übersicht der technischen Notizen und Proje
 * **[Bauen Sie Ihr eigenes Internet-of-Things-Endgerät zur Messung der Feinstaub-Belastung](https://github.com/edgarbutwilowski/technik-und-teilhabe/blob/main/beitr%C3%A4ge/2020-12-feinstaub-iot/index.md)** (ursprüngliche Fassung am 5. Dezember 2020 auf LinkedIn publiziert)
     * *Thema:* Aufbau eines preiswerten Sensors zur Erfassung der Luftqualität und die anschliessende Datenübermittlung.
     * *Schwerpunkt:* Sensorik, Datenhoheit und praktische Anwendung im Alltag.
+
+* **[3D-Gebäude aus OSM in Cesium.js - leicht gemacht](https://github.com/edgarbutwilowski/technik-und-teilhabe/blob/main/beitr%C3%A4ge/2020-10-3d-gebaeude-osm/README.md)** (ursprüngliche Fassung am 23. Oktober 2020 auf LinkedIn publiziert)
+    * *Thema:* Entwicklung eines Webservices zur direkten Transformation und Einbindung von OpenStreetMap-3D-Gebäuden in Cesium.js.
+    * *Schwerpunkt:* 3D-WebGIS, Datenkonvertierung und offene Geodaten.
