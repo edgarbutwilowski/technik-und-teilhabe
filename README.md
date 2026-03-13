@@ -1,6 +1,6 @@
 # Blog: Technik & Teilhabe
 
-Wissenschaft und Technik sind keine abgeschlossenen Systeme, sondern Teil unseres gesellschaftlichen Fundaments. Dieses Repository dient als offene Dokumentation von Projekten und Überlegungen, die den Alltag digitaler und begreifbarer machen sollen.
+Wissenschaft und Technik sind Teil unseres gesellschaftlichen Fundaments. Dieses Repository dient als offene Dokumentation von Projekten und Überlegungen, die Technologie und Wissenschaft begreifbarer machen sollen, zum Beispiel durch Mitmachprojekte.
 
 Es geht hier weniger um fertige Antworten als um den Prozess des Verstehens – vom Umgang mit Geodaten über das Bauen eigener Sensoren bis hin zur Frage, wie wir digitale Resilienz in einer komplexen Welt bewahren.
 
