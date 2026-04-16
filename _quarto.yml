@@ -1,0 +1,22 @@
+project:
+  type: website
+
+lang: de
+
+website:
+  title: "Technik & Teilhabe"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/edgarbutwilowski/technik-und-teilhabe
+        aria-label: GitHub
+      - icon: mastodon
+        href: https://swiss.social/@edgar_butwilowski
+        aria-label: Mastodon
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

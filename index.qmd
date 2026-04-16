@@ -1,0 +1,39 @@
+---
+title: ""
+listing:
+  contents: beiträge
+  sort: "date desc"
+  type: grid
+  grid-columns: 3
+  sort-ui: false
+  filter-ui: false
+  image-height: "250px"
+page-layout: full
+title-block-style: none
+toc: false
+---
+
+```{=html}
+<div class="cinematic-hero">
+  <img src="assets/hero.png" class="hero-bg" alt="Hero Background">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">WISSEN & GESELLSCHAFT</div>
+    <h1 class="hero-title">Technik & Teilhabe</h1>
+    <p class="hero-subtitle">Auf Spurensuche im Alltag: Wir staunen gemeinsam und versuchen zu verstehen, wie Technik eigentlich funktioniert – und was sie mit uns macht.</p>
+    
+    <div class="author-badge">
+       <img src="assets/profile.png" alt="Autor" class="author-img">
+       <div class="author-info">
+         <span class="author-name">Edgar Butwilowski</span>
+         <span class="author-role">Neugieriger Beobachter</span>
+       </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-intro">
+  <h2>Aktuelle Dossiers</h2>
+  <p>Hier finden Sie eine chronologische Übersicht zu technischen Analysen, Konzepten und Projekten. Jedes Thema wird so aufbereitet, dass der Prozess des Verstehens und Nachbauens im Vordergrund steht – fundiert und anschaulich dokumentiert.</p>
+</div>
+```
