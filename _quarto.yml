@@ -7,7 +7,7 @@ website:
   title: "Technik & Teilhabe"
   navbar:
     right:
-      - about.qmd
+      - impressum.qmd
       - icon: github
         href: https://github.com/edgarbutwilowski/technik-und-teilhabe
         aria-label: GitHub

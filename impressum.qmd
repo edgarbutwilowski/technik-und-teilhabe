@@ -1,0 +1,54 @@
+---
+title: "Impressum"
+---
+
+## Impressum
+
+**Verantwortlich:**
+
+Dr.-Ing. Edgar Butwilowski  
+c/o F2BII E-Commerce#192  
+Hintergoldingerstrasse 30  
+8638 Goldingen  
+Switzerland  
+
+**Kontakt:**  
+Da es sich um ein rein privates, nicht-kommerzielles Angebot handelt, bitten wir für Anfragen um Kontaktaufnahme über die verlinkten Profilseiten (Mastodon, GitHub) oder postalisch an die oben genannte Adresse.
+
+**Urheberrecht und freie Weiternutzung**  
+Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen grundsätzlich dem Urheberrecht. Um jedoch eine möglichst freie Verbreitung von Wissen zu fördern, werden alle eigenen Inhalte (soweit nicht anders gekennzeichnet) unter der **Creative Commons Zero (CC-0)** Lizenz (Public Domain Dedication) zur freien Weiterverwendung bereitgestellt. Das bedeutet, Sie dürfen diese Inhalte vervielfältigen, verändern, verbreiten und nutzen – auch für kommerzielle Zwecke –, ohne um Erlaubnis fragen zu müssen. Soweit die Inhalte auf dieser Seite nicht vom Seitenbetreiber selbst erstellt wurden, werden die Urheberrechte Dritter beachtet und diese sind entsprechend gekennzeichnet.
+
+---
+
+## Datenschutzerklärung
+
+Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten innerhalb dieses Webangebots ("Technik & Teilhabe") auf. Massgeblich sind die Bedingungen der Europäischen Datenschutz-Grundverordnung (DSGVO) sowie das revidierte Schweizer Datenschutzgesetz (DSG).
+
+### Verantwortlicher
+Verantwortlich für die Datenverarbeitung auf dieser Website ist die im Impressum genannte Person.
+
+### Allgemeines zur Datenverarbeitung
+Diese Website ist ein statisches Webangebot, generiert mit Quarto. Durch den Betreiber der Website selbst werden **keine** eigenen Tracking-Tools (wie Google Analytics), Cookies für Analysezwecke oder Social-Media-Plugins direkt eingebunden, die automatisch und ohne Ihr Zutun personenbezogene Daten an Dritte weitergeben. Ein Profiling findet nicht statt.
+
+### Bereitstellung der Website und Logfiles (Hosting via GitHub Pages)
+Dieses Webangebot wird bei **GitHub Pages** gehostet. Anbieter ist die GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA ("GitHub").
+
+Wenn Sie diese Website aufrufen, erfasst der Server des Hosters (GitHub) systembedingt automatisch sogenannte Server-Log-Dateien. Diese umfassen typischerweise:
+
+- IP-Adresse des zugreifenden Geräts
+- Datum und Uhrzeit des Zugriffs
+- URL der aufgerufenen Seite
+- Zuvor besuchte Website (Referrer-URL)
+- Verwendeter Browsertyp und Browserversion
+- Verwendetes Betriebssystem
+
+Die Erhebung und Verarbeitung dieser Daten ist technisch erforderlich zur Auslieferung der Website an Ihr Gerät sowie zur Gewährleistung von Sicherheit und Stabilität des Systems (berechtigtes Interesse gem. Art. 6 Abs. 1 lit. f DSGVO). Diese Logfiles werden von GitHub verarbeitet. Der Betreiber dieser Website hat keinen direkten Zugriff auf personifizierbare Rohdaten. 
+
+Bitte beachten Sie, dass bei einem Hosting in den USA Daten an Server von GitHub in den USA übertragen werden können. Die Übermittlung erfolgt auf Grundlage des Datenschutzabkommens zwischen der EU und den USA (Data Privacy Framework) sowie entsprechender Standardvertragsklauseln der EU-Kommission. Weitere Einzelheiten zur Datenverarbeitung durch GitHub finden Sie in der [Datenschutzerklärung von GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
+
+### Verlinkungen zu anderen Webseiten und Netzwerken
+Die auf dieser Website platzierten Links zu anderen Netzwerken (z. B. Mastodon, GitHub) sind reine externe Links. Bei einem Klick auf diese Links verlassen Sie dieses Webangebot und werden zu den jeweiligen Anbietern weitergeleitet. Erst dann werden Ihre Daten (z. B. IP-Adresse) an diese Anbieter übermittelt. Für die Datenverarbeitung auf den verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.
+
+### Ihre Rechte
+Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen (insb. Art. 15 bis 22 DSGVO) jederzeit das Recht auf unentgeltliche Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten, deren Herkunft, Empfänger und den Zweck der Datenverarbeitung. Ferner haben Sie ggf. ein Recht auf Berichtigung, Sperrung/Einschränkung der Verarbeitung, Datenübertragbarkeit oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit postalisch an die im Impressum angegebene Adresse wenden.
+Zudem steht Ihnen ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde zu.
