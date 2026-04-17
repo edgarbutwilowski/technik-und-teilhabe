@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Headings in Oswald for official, factual look */
@@ -55,7 +56,9 @@ header#title-block-header {
 /* Cinematic Hero Section */
 .cinematic-hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   height: 60vh;
   min-height: 450px;
   max-height: 700px;
