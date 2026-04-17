@@ -26,14 +26,14 @@ toc: false
        <img src="assets/profile.png" alt="Autor" class="author-img">
        <div class="author-info">
          <span class="author-name">Edgar Butwilowski</span>
-         <span class="author-role">Neugieriger Beobachter</span>
+         <span class="author-role">Scheitert sich schrittweise zur Erkenntnis</span>
        </div>
     </div>
   </div>
 </div>
 
 <div class="content-intro">
-  <h2>Aktuelle Dossiers</h2>
+  <h2>Dossiers und Analysen</h2>
   <p>Hier finden Sie eine chronologische Übersicht zu technischen Analysen, Konzepten und Projekten. Jedes Thema wird so aufbereitet, dass der Prozess des Verstehens und Nachbauens im Vordergrund steht – fundiert und anschaulich dokumentiert.</p>
 </div>
 ```
