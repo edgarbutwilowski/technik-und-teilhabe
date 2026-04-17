@@ -1,7 +1,7 @@
 ---
 title: ""
 listing:
-  contents: beiträge
+  contents: beitraege
   sort: "date desc"
   type: grid
   grid-columns: 3
