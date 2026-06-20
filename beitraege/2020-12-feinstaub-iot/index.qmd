@@ -4,9 +4,7 @@ date: "2020-12-05"
 image: "feinstaub-iot-heropic.jpg"
 categories: ["Sensorik", "IoT"]
 ---
-![](feinstaub-iot-heropic.jpg)
-
-_Bildquelle: radoma/stock.adobe.com_
+![_Bildquelle: radoma/stock.adobe.com_](feinstaub-iot-heropic.jpg)
 
 **Unsere Luft ist unsichtbar. Wir atmen sie tief in unsere Lungen, Tag für Tag. Doch was genau befindet sich eigentlich darin? Oft sind es Dinge, die unsere Sinne nicht erfassen können. Feinstaub zum Beispiel. Das "Internet of Things" (IoT) – also die Vernetzung von kleinen, intelligenten Geräten – gibt uns eine Art neuen Sinn. Es erlaubt uns, das Unsichtbare sichtbar zu machen. In diesem Workshop bauen wir gemeinsam ein solches "Sinnesorgan": Ein eigenes Messgerät auf Basis eines Raspberry Pi, mit dem wir die Feinstaub-Belastung direkt vor unserer eigenen Haustür messen können.**
 

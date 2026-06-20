@@ -64,9 +64,11 @@ h1, h2, h3, h4, h5, .title {
   letter-spacing: 0.02em;
 }
 
-/* Hide default quarto title block if it appears */
+/* Show default quarto title block */
 header#title-block-header {
-  display: none !important;
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Navbar overrides for theme */

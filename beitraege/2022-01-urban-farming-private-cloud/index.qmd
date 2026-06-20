@@ -4,9 +4,8 @@ date: "2022-01-29"
 image: "urban-farming_heropic.jpg"
 categories: ["Sensorik", "IoT", "Datenhoheit"]
 ---
-![](urban-farming_heropic.jpg)
+![_Bildquelle: mustbeyou/stock.adobe.com_](urban-farming_heropic.jpg)
 
-_Bildquelle: mustbeyou/stock.adobe.com_
 
 **Urban Farming soll in Zukunft helfen, die Ernährungsprobleme der Weltbevölkerung in urbanen Räumen zu reduzieren. Hierzu sollen hydroponische Vertikalgärten im städtischen Umfeld in grossem Stil angelegt werden. Da die Gärten vertikal verlaufen, verbrauchen sie relativ wenig Erdoberfläche. In diesem Workshop tauchen wir auf praktischem Weg in die Welt des Urban Farming ein.**
 
