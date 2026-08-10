@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "google224d9f6ffa10383a.html"
 
 lang: de
 
