@@ -1,0 +1,47 @@
+---
+title: "Digitale Resilienz und Souveränität: Eine Chance für Schweizer Stadtverwaltungen"
+date: "2024-12-14"
+image: "digitale-resilienz_heropic.jpg"
+categories: ["Digitale Souveränität", "Open Source", "Verwaltung"]
+---
+![_Foto: Louis/pexels.com_](digitale-resilienz_heropic.jpg)
+
+**In einer zunehmend digitalisierten Welt stehen Schweizer Stadtverwaltungen vor der Herausforderung, ihre digitalen Infrastrukturen nicht nur effizient, sondern auch widerstandsfähig und souverän zu gestalten. Die jüngsten Entwicklungen im Technologiebereich, insbesondere der aktuelle Fall von Broadcom, unterstreichen die Dringlichkeit, digitale Resilienz und Souveränität in den Mittelpunkt kommunaler Strategien zu rücken.**
+
+## Die Lektionen aus dem Broadcom-Fall
+
+Broadcom, ein weltweit operierendes Technologieunternehmen, hat durch strategische Übernahmen seine Marktmacht signifikant erweitert. Die **Übernahme von VMware** hat weltweit Bedenken hinsichtlich **Wettbewerb**, **Preisgestaltung** und **zukünftiger Innovationen** ausgelöst.\[1\] Schweizer Unternehmen und Verwaltungen, die auf VMware-Technologien setzen, stehen vor der Unsicherheit, wie sie künftig mit **höheren Kosten** oder **eingeschränktem Zugang zu wichtigen Technologien** umgehen können.
+
+Diese Situation verdeutlicht die **Risiken**, die mit der **Abhängigkeit** von **wenigen globalen Technologiekonzernen** einhergehen. Für Stadtverwaltungen besteht die Gefahr, dass **kritische digitale Infrastrukturen** von **externen Entscheidungen** beeinflusst werden, die ausserhalb ihres Kontrollbereichs liegen.
+
+## Warum digitale Resilienz und Souveränität für Schweizer Städte entscheidend sind
+
+* **Schutz vor externen Einflüssen:** Die Abhängigkeit von internationalen Technologieriesen kann zu **Vulnerabilitäten** führen, sei es durch **Preisänderungen**, **Lieferengpässe** oder **geopolitische Spannungen**.\[2\]
+* **Gewährleistung der Datenhoheit:** Sichere und souveräne Datenverwaltung ist essenziell, um die **Privatsphäre der Bürgerinnen und Bürger** zu schützen und den gesetzlichen Anforderungen, wie dem **Schweizer Datenschutzgesetz** (DSG), gerecht zu werden.
+* **Stärkung der nationalen Innovationskraft:** Durch die Förderung **lokaler Technologien** und Unternehmen kann die Schweiz ihre Position als **Innovationsführer** festigen und **Arbeitsplätze** im Inland sichern.
+
+## Strategien für mehr digitale Unabhängigkeit in Schweizer Stadtverwaltungen
+
+* **Einsatz von Open-Source-Software (OSS):** OSS bietet **Transparenz**, **Anpassungsfähigkeit** und verhindert die Bindung an einen einzigen Anbieter. Städte wie Bern und Lausanne haben bereits positive Erfahrungen mit Open-Source-Lösungen gemacht und berichten von erhöhten Sicherheitsstandards und Kosteneinsparungen.
+* **Förderung lokaler Technologien und Partnerschaften:** Die Zusammenarbeit mit Schweizer IT-Unternehmen **stärkt die heimische Wirtschaft** und schafft vertrauensvolle Partnerschaften. Initiativen wie "Digitalswitzerland" unterstützen die **Vernetzung** und **Zusammenarbeit** auf nationaler Ebene.\[3\]
+* **Investition in eigene IT-Kompetenzen:** Durch den Aufbau **interner Expertise** können Verwaltungen schneller **auf Herausforderungen reagieren** und sind weniger von externen Dienstleistern abhängig.
+* **Sichere Dateninfrastruktur:** Der Betrieb eigener Rechenzentren oder die Nutzung von Schweizer Cloud-Anbietern garantiert, dass Daten den strengen **Schweizer Datenschutzbestimmungen** unterliegen. Anbieter wie "Swisscom" oder "Green" bieten cloudbasierte Lösungen innerhalb der Landesgrenzen an.
+* **Kontinuierliche Weiterbildung und Sensibilisierung:** Mitarbeitende sollten **regelmässig geschult** werden, um auf dem **neuesten Stand der Technik** zu bleiben und **Sicherheitsrisiken** zu **minimieren**.
+
+## Ein Blick nach vorn
+
+Die digitale Transformation bietet enorme Chancen für Schweizer Städte. Doch um diese Chancen voll auszuschöpfen, müssen Stadtverwaltungen **proaktiv handeln**. Der Fokus sollte darauf liegen, digitale Infrastrukturen zu schaffen, die **resilient** gegenüber **externen Schocks** sind und die **Souveränität der Städte** bewahren.
+
+Der Broadcom-Fall dient als **Weckruf**. Er stellt die Frage in den Raum: Wie können wir sicherstellen, dass unsere digitalen Systeme und Daten in unseren Händen bleiben? Die Antwort liegt in einer Kombination aus **technologischer Unabhängigkeit**, **strategischen Partnerschaften** und dem Mut, **neue Wege** zu gehen.
+
+## Schlussgedanken
+
+Es ist an der Zeit, dass **Schweizer Stadtverwaltungen** die **Kontrolle über ihre digitale Zukunft** übernehmen. Durch gezielte Massnahmen können sie nicht nur die **Sicherheit** und **Effizienz** ihrer Dienste **erhöhen**, sondern auch das **Vertrauen der Bürgerinnen und Bürger** in die digitalen Angebote stärken. Die Investition in digitale Resilienz und Souveränität ist eine Investition in die langfristige Stabilität und Unabhängigkeit unserer Städte.
+
+## Linkliste
+
+\[1\] Zu teuer: Broadcom verliert weiteren VMware-Großkunden - heise online <https://www.heise.de/news/VMware-Broadcom-verliert-weiteren-Grosskunden-wegen-hoher-Kosten-10186752.html>
+
+\[2\] "Wenn die Schweiz nicht aufpasst, wird sie in den digitalen Bereichen zum Spielball mächtiger Firmen und Staaten" - Berner Fachhochschule <https://www.bfh.ch/de/aktuell/storys/2024/digitale-souveraenitaet-interview-matthias-stuermer/>
+
+\[3\] Digitale Souveränität: Bundespräsident Cassis will Handlungsfähigkeit der Schweiz im digitalen Raum stärken - Das Portal der Schweizer Regierung <https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.msg-id-91033.html>
