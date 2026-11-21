@@ -1,0 +1,27 @@
+<script>
+// Hell/Dunkel-Schalter nur für die aktuelle Browser-Session merken.
+// Quarto speichert die manuelle Wahl sonst dauerhaft im localStorage.
+// Hier wird dieser eine Schlüssel in den sessionStorage umgeleitet,
+// der beim Schliessen des Tabs bzw. Browsers verworfen wird.
+(function () {
+  var KEY = "quarto-color-scheme";
+  try {
+    var local = window.localStorage;
+    var session = window.sessionStorage;
+    local.removeItem(KEY); // Altlasten aus früheren Besuchen entfernen
+    var proto = Storage.prototype;
+    var getItem = proto.getItem, setItem = proto.setItem, removeItem = proto.removeItem;
+    proto.getItem = function (k) {
+      return (this === local && k === KEY) ? getItem.call(session, k) : getItem.call(this, k);
+    };
+    proto.setItem = function (k, v) {
+      return (this === local && k === KEY) ? setItem.call(session, k, v) : setItem.call(this, k, v);
+    };
+    proto.removeItem = function (k) {
+      return (this === local && k === KEY) ? removeItem.call(session, k) : removeItem.call(this, k);
+    };
+  } catch (e) {
+    // Speicher blockiert (z. B. privater Modus): Quarto folgt dann einfach der Browser-Einstellung.
+  }
+})();
+</script>

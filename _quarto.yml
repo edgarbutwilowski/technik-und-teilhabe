@@ -19,6 +19,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    respect-user-color-scheme: true
     css: styles.css
+    include-in-header: color-scheme-session.html
     toc: true

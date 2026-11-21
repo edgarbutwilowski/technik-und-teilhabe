@@ -45,6 +45,20 @@
   --accent-primary: #0284c7 /* Modest Sky Blue */;
   --header-bg: #1e3a5f; /* Dark Blue */
   --border-color: #e2e8f0;
+  --heading-color: #0f172a;
+  --link-color: #1e3a5f; /* Dark Blue, wie Header */
+}
+
+/* Dunkelmodus: Quarto setzt body.quarto-dark */
+body.quarto-dark {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --surface-hover: #334155;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --heading-color: #f1f5f9;
+  --link-color: #7dd3fc;
 }
 
 body {
@@ -60,7 +74,7 @@ body {
 /* Headings in Oswald for official, factual look */
 h1, h2, h3, h4, h5, .title {
   font-family: 'Fira Sans', sans-serif;
-  color: #0f172a;
+  color: var(--heading-color);
   letter-spacing: 0.02em;
 }
 
@@ -213,7 +227,7 @@ header#title-block-header {
 
 .content-intro h2 {
   font-family: 'Fira Sans', sans-serif;
-  color: var(--header-bg);
+  color: var(--link-color);
   font-size: 2.2rem;
   margin-bottom: 1.2rem;
   font-weight: 600;
@@ -261,7 +275,7 @@ header#title-block-header {
   font-weight: 600;
   margin-bottom: 0.8rem;
   line-height: 1.3;
-  color: var(--header-bg);
+  color: var(--link-color);
 }
 
 .quarto-grid-item.card .card-text {
@@ -273,8 +287,8 @@ header#title-block-header {
 /* Category Tags */
 div.listing-categories .listing-category {
   background-color: transparent;
-  color: var(--header-bg);
-  border: 1px solid var(--header-bg);
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
   border-radius: 2px;
   padding: 0.2rem 0.6rem;
   font-weight: 500;
@@ -285,7 +299,7 @@ div.listing-categories .listing-category {
 
 /* Links and utilities */
 a {
-  color: var(--header-bg);
+  color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: var(--accent-primary);
 }
@@ -319,4 +333,35 @@ a:hover {
 #TOC a:hover, #TOC a.active, .toc-actions a:hover {
   color: var(--accent-primary) !important;
   font-weight: bold;
+}
+
+/* Druckansicht: Bildpaare nebeneinander lassen.
+   Quarto stapelt .quarto-layout-row unter 768px Breite untereinander –
+   eine A4-Seite ist im Druck schmaler, daher hier zurück auf Zeilen-Layout. */
+@media print {
+  .quarto-layout-row {
+    flex-direction: row !important;
+  }
+  .quarto-layout-panel,
+  .quarto-layout-row,
+  figure {
+    break-inside: avoid;
+  }
+
+  /* Im Dunkelmodus trotzdem hell drucken (dunkle Schrift auf weissem Papier) */
+  body.quarto-dark {
+    --bg-color: #ffffff;
+    --surface-color: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --border-color: #e2e8f0;
+    --heading-color: #0f172a;
+    --link-color: #1e3a5f;
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+  }
+  body.quarto-dark .callout,
+  body.quarto-dark .callout * {
+    color: #1e293b !important;
+  }
 }
