@@ -348,6 +348,21 @@ a:hover {
     break-inside: avoid;
   }
 
+  /* Eingeklappte Boxen (collapse="true") im Druck immer aufgeklappt zeigen –
+     auf Papier lassen sie sich nicht mehr öffnen. Der Klapp-Pfeil entfällt. */
+  .callout .callout-collapse.collapse,
+  .callout .callout-collapse.collapsing {
+    display: block !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+  .callout .callout-btn-toggle {
+    display: none !important;
+  }
+  .callout {
+    break-inside: avoid;
+  }
+
   /* Im Dunkelmodus trotzdem hell drucken (dunkle Schrift auf weissem Papier) */
   body.quarto-dark {
     --bg-color: #ffffff;
